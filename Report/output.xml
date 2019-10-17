@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20191017 11:02:34.112" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/sheetalsahu/IdeaProjects/GlobalTest/TestSuite" id="s1" name="TestSuite">
+<suite source="/Users/sheetalsahu/IdeaProjects/GlobalTest/TestSuite/Verify the Task1.robot" id="s1-s1" name="Verify the Task1">
+<kw type="setup" name="Open the Browser and load the site Disovery.com" library="Projectkeyword">
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Open Browser" library="CustomSeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191017 11:02:34.353" level="INFO">Opening browser 'Chrome' to base url 'https://go.discovery.com/'</msg>
+<status status="PASS" endtime="20191017 11:02:59.154" starttime="20191017 11:02:34.352"></status>
+</kw>
+<kw name="Maximize Browser Window" library="CustomSeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191017 11:02:59.409" starttime="20191017 11:02:59.155"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:02:59.409" starttime="20191017 11:02:34.352"></status>
+</kw>
+<test id="s1-s1-t1" name="Click on Shows tab and select See All Shows Option">
+<kw name="Click on show tab from menu and select the see all shows options" library="Projectkeyword">
+<kw name="Click Element" library="CustomSeleniumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=${xpathshowtab}</arg>
+</arguments>
+<msg timestamp="20191017 11:02:59.412" level="INFO">Clicking element 'xpath=//*[@id="react-root"]/div/div[1]/div[2]/header/div[2]/div/nav/ul/li[2]/span'.</msg>
+<status status="PASS" endtime="20191017 11:03:04.741" starttime="20191017 11:02:59.411"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<assign>
+<var>${item}</var>
+</assign>
+<msg timestamp="20191017 11:03:04.741" level="INFO">${item} = </msg>
+<status status="PASS" endtime="20191017 11:03:04.741" starttime="20191017 11:03:04.741"></status>
+</kw>
+<kw name="Open Browser" library="CustomSeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${allshowsurl}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191017 11:03:04.742" level="INFO">Opening browser 'Chrome' to base url 'https://go.discovery.com/tv-shows/'</msg>
+<status status="PASS" endtime="20191017 11:03:20.469" starttime="20191017 11:03:04.742"></status>
+</kw>
+<kw name="Maximize Browser Window" library="CustomSeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191017 11:03:20.652" starttime="20191017 11:03:20.469"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:20.653" starttime="20191017 11:02:59.411"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:20.653" critical="yes" starttime="20191017 11:02:59.410"></status>
+</test>
+<test id="s1-s1-t2" name="Wait for Page load and Select the shows which contain string APOLLO">
+<kw name="Load the page and Select the shows having name as Apollo" library="Projectkeyword">
+<kw name="Execute Javascript" library="CustomSeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>window.scrollTo(0,3000)</arg>
+</arguments>
+<msg timestamp="20191017 11:03:20.656" level="INFO">Executing JavaScript:
+window.scrollTo(0,3000)</msg>
+<status status="PASS" endtime="20191017 11:03:20.661" starttime="20191017 11:03:20.655"></status>
+</kw>
+<kw name="Execute Javascript" library="CustomSeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>window.scrollTo(0,3000)</arg>
+</arguments>
+<msg timestamp="20191017 11:03:20.661" level="INFO">Executing JavaScript:
+window.scrollTo(0,3000)</msg>
+<status status="PASS" endtime="20191017 11:03:20.709" starttime="20191017 11:03:20.661"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="CustomSeleniumLibrary">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>xpath=${apolloxpath}</arg>
+<arg>50s</arg>
+</arguments>
+<status status="PASS" endtime="20191017 11:03:24.981" starttime="20191017 11:03:20.709"></status>
+</kw>
+<kw name="Get Webdriver Instance" library="CustomSeleniumLibrary">
+<assign>
+<var>${webdriver}</var>
+</assign>
+<msg timestamp="20191017 11:03:24.982" level="INFO">${webdriver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="8cefde0b5dcdac23c0840e94b28a08b5")&gt;</msg>
+<status status="PASS" endtime="20191017 11:03:24.982" starttime="20191017 11:03:24.982"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${webdriver}</arg>
+</arguments>
+<msg timestamp="20191017 11:03:24.983" level="INFO">${webdriver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="8cefde0b5dcdac23c0840e94b28a08b5")&gt;</msg>
+<status status="PASS" endtime="20191017 11:03:24.983" starttime="20191017 11:03:24.983"></status>
+</kw>
+<kw name="Select All The Apollo Shows" library="MyLibrary">
+<arguments>
+<arg>${webdriver}</arg>
+</arguments>
+<assign>
+<var>@{apollolist}</var>
+</assign>
+<msg timestamp="20191017 11:03:25.659" level="INFO">@{apollolist} = [ https://go.discovery.com/tv-shows/confessions-from-space-apollo | https://go.discovery.com/tv-shows/apollo-the-forgotten-films ]</msg>
+<status status="PASS" endtime="20191017 11:03:25.659" starttime="20191017 11:03:24.983"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{apollolist}</arg>
+</arguments>
+<msg timestamp="20191017 11:03:25.660" level="INFO">@{apollolist} = [ https://go.discovery.com/tv-shows/confessions-from-space-apollo | https://go.discovery.com/tv-shows/apollo-the-forgotten-films ]</msg>
+<status status="PASS" endtime="20191017 11:03:25.660" starttime="20191017 11:03:25.660"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:25.660" starttime="20191017 11:03:20.655"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:25.660" critical="yes" starttime="20191017 11:03:20.654"></status>
+</test>
+<test id="s1-s1-t3" name="Verify the status of the selected shows">
+<kw name="Launch the selected apollo sites and add it to favourites if not added" library="Projectkeyword">
+<kw name="Launch The Apollo Site And Add It To Fav List" library="MyLibrary">
+<arguments>
+<arg>${apollolist}</arg>
+<arg>${webdriver}</arg>
+</arguments>
+<assign>
+<var>@{favlist}</var>
+</assign>
+<msg timestamp="20191017 11:03:47.044" level="INFO">['https://go.discovery.com/tv-shows/confessions-from-space-apollo', 'https://go.discovery.com/tv-shows/apollo-the-forgotten-films']</msg>
+<msg timestamp="20191017 11:03:47.044" level="INFO">@{favlist} = [ Apollo: The Forgotten Films ]</msg>
+<status status="PASS" endtime="20191017 11:03:47.044" starttime="20191017 11:03:25.662"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>@{favlist}</arg>
+</arguments>
+<msg timestamp="20191017 11:03:47.045" level="INFO">@{favlist} = [ Apollo: The Forgotten Films ]</msg>
+<status status="PASS" endtime="20191017 11:03:47.045" starttime="20191017 11:03:47.044"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:47.045" starttime="20191017 11:03:25.662"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:47.045" critical="yes" starttime="20191017 11:03:25.661"></status>
+</test>
+<test id="s1-s1-t4" name="Click on My Videos from the right top menu and Select the favourite shows section from the page">
+<kw name="Click on my video from the right corner menu" library="Projectkeyword">
+<kw name="Click Element" library="CustomSeleniumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=${xpathmyvideosmenu}</arg>
+</arguments>
+<msg timestamp="20191017 11:03:47.047" level="INFO">Clicking element 'xpath=//li[@class='dscHeaderMain__hideMobile']'.</msg>
+<status status="PASS" endtime="20191017 11:03:47.132" starttime="20191017 11:03:47.047"></status>
+</kw>
+<kw name="Click Element" library="CustomSeleniumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=${xpathmyvideo}</arg>
+</arguments>
+<msg timestamp="20191017 11:03:47.133" level="INFO">Clicking element 'xpath=//*[@id="react-root"]/div/div[1]/div[2]/header/nav/div[2]/div/div/div[2]/div[2]/ul/li[4]/a'.</msg>
+<status status="PASS" endtime="20191017 11:03:47.234" starttime="20191017 11:03:47.132"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20191017 11:03:57.235" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20191017 11:03:57.236" starttime="20191017 11:03:47.234"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:57.236" starttime="20191017 11:03:47.046"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:57.236" critical="yes" starttime="20191017 11:03:47.045"></status>
+</test>
+<test id="s1-s1-t5" name="Validate the favourite should show the same list added in previous steps">
+<kw name="Verify the favorite or unfavorite titles under FAVORITE SHOWS section" library="Projectkeyword">
+<kw name="Get The List Of Shows From Favourite Section" library="MyLibrary">
+<arguments>
+<arg>${webdriver}</arg>
+</arguments>
+<assign>
+<var>@{favshowlist}</var>
+</assign>
+<msg timestamp="20191017 11:03:57.894" level="INFO">@{favshowlist} = [ https://go.discovery.com/tv-shows/apollo-the-forgotten-films ]</msg>
+<status status="PASS" endtime="20191017 11:03:57.894" starttime="20191017 11:03:57.239"></status>
+</kw>
+<kw name="Compare Both The List" library="MyLibrary">
+<arguments>
+<arg>${favshowlist}</arg>
+<arg>@{favlist}</arg>
+</arguments>
+<msg timestamp="20191017 11:03:57.895" level="INFO">The lists are not same</msg>
+<status status="PASS" endtime="20191017 11:03:57.895" starttime="20191017 11:03:57.894"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:57.895" starttime="20191017 11:03:57.238"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:57.895" critical="yes" starttime="20191017 11:03:57.237"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="CustomSeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20191017 11:03:58.245" starttime="20191017 11:03:57.896"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:03:58.246" starttime="20191017 11:02:34.138"></status>
+</suite>
+<suite source="/Users/sheetalsahu/IdeaProjects/GlobalTest/TestSuite/Verify the Task2.robot" id="s1-s2" name="Verify the Task2">
+<kw type="setup" name="Open the Browser and load the site Disovery.com" library="Projectkeyword">
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Open Browser" library="CustomSeleniumLibrary">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20191017 11:03:58.255" level="INFO">Opening browser 'Chrome' to base url 'https://go.discovery.com/'</msg>
+<status status="PASS" endtime="20191017 11:04:20.310" starttime="20191017 11:03:58.254"></status>
+</kw>
+<kw name="Maximize Browser Window" library="CustomSeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20191017 11:04:20.584" starttime="20191017 11:04:20.311"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:04:20.585" starttime="20191017 11:03:58.254"></status>
+</kw>
+<test id="s1-s2-t1" name="Scroll Down to Popular Shows">
+<kw name="Scroll down and serach for popular shows" library="Projectkeyword">
+<kw name="Get Webdriver Instance" library="CustomSeleniumLibrary">
+<assign>
+<var>${webdriver}</var>
+</assign>
+<msg timestamp="20191017 11:04:20.587" level="INFO">${webdriver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="a5c91d87bcb6bcf8358997f7cf639b8b")&gt;</msg>
+<status status="PASS" endtime="20191017 11:04:20.587" starttime="20191017 11:04:20.587"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${webdriver}</arg>
+</arguments>
+<msg timestamp="20191017 11:04:20.588" level="INFO">${webdriver} = &lt;selenium.webdriver.chrome.webdriver.WebDriver (session="a5c91d87bcb6bcf8358997f7cf639b8b")&gt;</msg>
+<status status="PASS" endtime="20191017 11:04:20.588" starttime="20191017 11:04:20.588"></status>
+</kw>
+<kw name="Execute Javascript" library="CustomSeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>window.scrollTo(0,3000)</arg>
+</arguments>
+<msg timestamp="20191017 11:04:20.589" level="INFO">Executing JavaScript:
+window.scrollTo(0,3000)</msg>
+<status status="PASS" endtime="20191017 11:04:20.638" starttime="20191017 11:04:20.589"></status>
+</kw>
+<kw name="Execute Javascript" library="CustomSeleniumLibrary">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>window.scrollTo(0,3000)</arg>
+</arguments>
+<msg timestamp="20191017 11:04:20.639" level="INFO">Executing JavaScript:
+window.scrollTo(0,3000)</msg>
+<status status="PASS" endtime="20191017 11:04:20.691" starttime="20191017 11:04:20.639"></status>
+</kw>
+<kw name="Click Element" library="CustomSeleniumLibrary">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>xpath=${xpathpopularshows}</arg>
+</arguments>
+<msg timestamp="20191017 11:04:20.692" level="INFO">Clicking element 'xpath=//*[@id="react-root"]/div/div[1]/section[9]/div/div[1]/h2'.</msg>
+<status status="PASS" endtime="20191017 11:04:20.810" starttime="20191017 11:04:20.692"></status>
+</kw>
+<kw name="Click On The Last Arrow Key" library="MyLibrary">
+<arguments>
+<arg>${webdriver}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 11:04:22.292" starttime="20191017 11:04:20.811"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:04:22.292" starttime="20191017 11:04:20.586"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:04:22.292" critical="yes" starttime="20191017 11:04:20.585"></status>
+</test>
+<test id="s1-s2-t2" name="Click on Explore the show">
+<kw name="Click on Explore the shows at the show end" library="Projectkeyword">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>10s</arg>
+</arguments>
+<msg timestamp="20191017 11:04:32.295" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" endtime="20191017 11:04:32.295" starttime="20191017 11:04:22.294"></status>
+</kw>
+<kw name="Click On Explore The Show And Click On Show More Two Times" library="MyLibrary">
+<arguments>
+<arg>${webdriver}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 11:05:20.889" starttime="20191017 11:04:32.296"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:05:20.889" starttime="20191017 11:04:22.293"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:05:20.889" critical="yes" starttime="20191017 11:04:22.293"></status>
+</test>
+<test id="s1-s2-t3" name="Create a new file and write all the show title and duration">
+<kw name="Create a csv file and store the required information" library="Projectkeyword">
+<kw name="Get The List Of Titles And Duration" library="MyLibrary">
+<arguments>
+<arg>${webdriver}</arg>
+</arguments>
+<status status="PASS" endtime="20191017 11:05:21.751" starttime="20191017 11:05:20.891"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:05:21.751" starttime="20191017 11:05:20.890"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:05:21.751" critical="yes" starttime="20191017 11:05:20.890"></status>
+</test>
+<kw type="teardown" name="Close All Browsers" library="CustomSeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20191017 11:05:21.957" starttime="20191017 11:05:21.752"></status>
+</kw>
+<status status="PASS" endtime="20191017 11:05:21.957" starttime="20191017 11:03:58.249"></status>
+</suite>
+<status status="PASS" endtime="20191017 11:05:21.960" starttime="20191017 11:02:34.114"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="8">Critical Tests</stat>
+<stat fail="0" pass="8">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestSuite" pass="8">TestSuite</stat>
+<stat fail="0" id="s1-s1" name="Verify the Task1" pass="5">TestSuite.Verify the Task1</stat>
+<stat fail="0" id="s1-s2" name="Verify the Task2" pass="3">TestSuite.Verify the Task2</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
